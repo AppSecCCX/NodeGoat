@@ -53,9 +53,9 @@ pipeline {
         stage('Dastadrly Scan...') {
             steps {
                 echo 'Debug...'
-                    sh 'ss -lutn'
-                echo 'Starting dev server...'
-                    sh 'npm start'
+                    sh 'docker-compose up'
+                // echo 'Starting dev server...'
+                //     sh 'npm start'
                 echo 'Dastardly Scanning...'
                     sh 'docker pull public.ecr.aws/portswigger/dastardly:latest'
                     cleanWs()
