@@ -52,6 +52,8 @@ pipeline {
 
         stage('Dastadrly Scan...') {
             steps {
+                echo 'Debug...'
+                    sh 'ifconfig'
                 echo 'Starting dev server...'
                     sh 'npm start'
                 echo 'Dastardly Scanning...'
