@@ -53,7 +53,7 @@ pipeline {
         stage('Dastadrly Scan...') {
             steps {
                 echo 'Debug...'
-                    sh 'docker-compose up'
+                    sh 'docker-compose up --detach'
                 // echo 'Starting dev server...'
                 //     sh 'npm start'
                 echo 'Dastardly Scanning...'
